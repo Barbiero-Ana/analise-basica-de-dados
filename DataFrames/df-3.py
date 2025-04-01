@@ -13,7 +13,8 @@ df['Total'] = df['Preco'] * df['Quantidade']
 
 # Estatistica descritiva para colunas de valor numérico
 
-print(df.describe())
+# print(df.describe())
 
 print(df['Preco'].mean())  # média da coluna preco
 print(df['Quantidade'].sum())  #Soma da coluna quantidade
+
