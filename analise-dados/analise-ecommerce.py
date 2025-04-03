@@ -20,13 +20,13 @@ def qtd_compra(df):
 
         if decisao == 1:
             try:
-                op = int(input('Deseja filtrar a busca de quantidade?\n1 - Sim\n2 - Não'))
+                op = int(input('Deseja filtrar a busca de quantidade?\n1 - Sim\n2 - Não\n- '))
                 if op == 1:
                     #inserir função de busca (ainda vou criar este caramba)
                     print()
                 else:
-                    print(f'\nQuantidade de generos que compram no ecommerce:\n')
-                    print(df['Customer_ID'].value_counts())
+                    print(f'\nQuantidade de pessoas que compraram:')
+                    print(f'-> {df['Customer_ID'].nunique()} pessoas\n')
                     # colocar código de ver apenas a quantidade total
             except:
                 print()
