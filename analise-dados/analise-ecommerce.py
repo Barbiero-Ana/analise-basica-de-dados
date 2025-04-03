@@ -3,14 +3,32 @@ import pandas as pd
 
 df = pd.read_csv('Ecommerce_Consumer_Behavior_Analysis_Data.csv')
 
-
+#abrindo e acessando o arv csv
 column_names = df.columns
 print(column_names)
 
 #Qual o publico alvo do ecommerce?
 
 
+def qtd_compra():
 
+    while True:
+        print(f'1 - Ver a quantia de pessoas que compram\n2 - ')
+        # ao clicar em um perguntar se deseja filtrar por genero, caso nao apenas mostrar a quantidade total
+
+        decisao = int(input(f'Digite qual opção você deseja: '))
+
+        if decisao == 1:
+            try:
+                op = int(input('Deseja filtrar a busca de quantidade?\n1 - Sim\n2 - Não'))
+                if op == 1:
+                    #inserir função de busca (ainda vou criar este caramba)
+                    print()
+                else:
+                    print()
+                    # colocar código de ver apenas a quantidade total
+            except:
+                print()
 
 # quantidade de cada gênero
 
@@ -26,6 +44,7 @@ print(df['Gender'].value_counts(normalize= True) * 100)
 
 print(f'{'=' * 70}' )
 #Quantos solteiros estao presentes no arquivo?
+
 print(f'\nQuantidade de pessoas solteiras que compram no ecommerce: {df['Marital_Status'].value_counts().get('Single', 0)}\n')
 
 print(f'{'=' * 70}' )
