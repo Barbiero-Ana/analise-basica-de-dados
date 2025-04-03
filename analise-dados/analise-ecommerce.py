@@ -13,11 +13,10 @@ column_names = df.columns
 def qtd_compra(df):
 
     while True:
-        print(f'1 - Ver a quantia de pessoas que compram\n2 - Porcentagem de pessoas que compram\n3 - ')
+        print(f'1 - Ver a quantia de pessoas que compram\n2 - Porcentagem de pessoas que compram\n3 - Ver total de compras realizadas\n4 - ')
         # ao clicar em um perguntar se deseja filtrar por genero, caso nao apenas mostrar a quantidade total
 
         decisao = int(input(f'Digite qual opção você deseja: '))
-
         if decisao == 1:
             try:
                 op = int(input('Deseja filtrar a busca de quantidade?\n1 - Sim\n2 - Não\n- '))
@@ -27,17 +26,17 @@ def qtd_compra(df):
                 else:
                     print(f'\nQuantidade de pessoas que compraram:')
                     print(f'-> {df['Customer_ID'].nunique()} pessoas\n')
-                    # colocar código de ver apenas a quantidade total
+                    #esse nunique() conta valores unicos me retornando um valor total de que fizeram pelo menos uma compra
             except:
                 print()
 
         elif decisao == 2:
             try:
-                op = int(input('Deseja filtrar a busa?\n1 - Sim\n2 - Não'))
+                op = int(input('Deseja filtrar a busa?\n1 - Sim\n2 - Não\n- '))
                 if op == 1:
                     print()
                 else:
-                    print()
+                    print(f'A porcentagem de compra das pessoas é de: {df['Customer_ID'].nunique().value_counts() *100}')
             except:
                 print()
 
