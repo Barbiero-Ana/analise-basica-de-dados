@@ -78,3 +78,4 @@ qtd_compra(df)
 
 # # Qual a proporção de clientes por nivel de renda (baixa, media, alta)
 
+print(f'\nProporção de clientes por nivel de renda e genero:')
